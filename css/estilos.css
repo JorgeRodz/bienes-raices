@@ -1,10 +1,38 @@
 
+body {
+    font-family: 'Lato', sans-serif;
+}
 
-/*------------------------------------------Header----------------------------------------------------*/
+/*---------------------------------------------------Globales----------------------------------------------------------------*/
+.contenedor {
+    max-width: 1200px; /*Solo va a llegar hasta los 1200px*/
+    margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
+}
+
+/*---------------------------------------------------Header------------------------------------------------------------------*/
 .site-header.inicio {
     background-image: url(../img/header.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 600px;
+    background-position: center center; /*Centramos la imagen*/
+    background-size: cover; /*Le agregamos un tamaño a la imagen, en este caso usamos 'cover' que lo que hace es redistribur la imagen para que no se vean espacios */
+    height: 100vh; /*Viewport height*/
+    min-height: 600px; /*El contenido ya no se hara mas pequeño y quedara en 600px*/
+}
+.barra {
+    display: flex;
+    justify-content: space-between; /*Para alinear los flex items horizontalmente*/
+    align-items: center; /*Para alinear los flex items verticalmente*/
+    padding-top: 30px;
+}
+/*---------------Navegacion-----------------*/
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;/*Para quitar la linea que traen por defecto los enlaces*/
+    font-size: 18px;
+    margin-right: 20px;
+}
+.navegacion a:last-of-type { /*Para seleccionar el ultimo enlace del menu de navegacion*/
+    margin-right: 0;
+}
+.navegacion a:hover {
+    color: #71b100;
 }
