@@ -1,13 +1,35 @@
 
-body {
-    font-family: 'Lato', sans-serif;
+html{
+    font-size: 62.5%; /*Reset para REMS - 62.5% = 10px de 16px | 1 rem = 10px  */
 }
+body {
+    font-family: 'Lato', sans-serif; /*Establecimos el tipo de fuente para todo el documento*/
+    font-size: 1.6rem; /*Para establecer un tamaño estandar a todo el font-size del documento;*/
+}
+
 
 /*---------------------------------------------------Globales----------------------------------------------------------------*/
 .contenedor {
-    max-width: 1200px; /*Solo va a llegar hasta los 1200px*/
+    max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
     margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
 }
+
+/*---------Titulos-----------*/
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+    
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+
 
 /*---------------------------------------------------Header------------------------------------------------------------------*/
 .site-header.inicio {
@@ -15,20 +37,32 @@ body {
     background-position: center center; /*Centramos la imagen*/
     background-size: cover; /*Le agregamos un tamaño a la imagen, en este caso usamos 'cover' que lo que hace es redistribur la imagen para que no se vean espacios */
     height: 100vh; /*Viewport height*/
-    min-height: 600px; /*El contenido ya no se hara mas pequeño y quedara en 600px*/
+    min-height: 60rem; /*El contenido ya no se hara mas pequeño y quedara en 600px*/
+}
+.contenido-header {
+    height: 100%; /*Tomamos el 100% de altura del contenedor padre osea ocupamos todo el height del <header> esto para aplicar los valores de la propiedad justify-content que se desbloquea gracias al display: flex; */
+    display: flex;
+    flex-direction: column; /*Para cambiar la direccion de flexbox*/
+    justify-content: space-between;
+}
+.contenido-header h1 {
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem; /* Para establecer un witdh maximo y que el contenido hiciera un salto de linea.*/
+    line-height: 2; /* Interlineado de textos*/
 }
 .barra {
     display: flex;
     justify-content: space-between; /*Para alinear los flex items horizontalmente*/
     align-items: center; /*Para alinear los flex items verticalmente*/
-    padding-top: 30px;
+    padding-top: 3rem;
 }
 /*---------------Navegacion-----------------*/
 .navegacion a {
     color: #ffffff;
     text-decoration: none;/*Para quitar la linea que traen por defecto los enlaces*/
-    font-size: 18px;
-    margin-right: 20px;
+    font-size: 1.8rem;
+    margin-right: 2rem;
 }
 .navegacion a:last-of-type { /*Para seleccionar el ultimo enlace del menu de navegacion*/
     margin-right: 0;
