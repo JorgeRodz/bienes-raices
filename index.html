@@ -12,8 +12,8 @@
 <body>
 
     <header class="site-header inicio">
-        <div class="contenedor contenido-header"> <!--Se aplican dos clasen-->
-            <div class="barra">
+        <div class="contenedor contenido-header"><!--Flexbox Container-->
+            <div class="barra"><!--Flexbox Container-->
                 <a href="/">
                     <img src="img/logo.svg" alt="Logotipo de Bienes raices">
                 </a>
@@ -24,33 +24,35 @@
                     <a href="blog.html">Blog</a>
                     <a href="contacto.html">Contacto</a>
                 </nav>    
-            </div>
+            </div><!--barra-->
             <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>    
-        </div> <!--contenedor contenido-header-->
+        </div><!--contenedor contenido-header-->
     </header>
     
     <!--------------------------------------------------------------------------------------------------------->
 
-    <section>
-        <h2>Más Sobre Nosotros</h2>
+    <section class="contenedor seccion">
+        <h2 class="fw-300 centrar-texto">Más Sobre Nosotros</h2>
 
-        <div>
-            <img src="img/icono1.svg" alt="Icono Seguridad">
-            <h3>SEGURIDAD</h3>
-            <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque</p>
-        </div>
+        <div class="iconos-nosotros"><!--Flexbox Container-->
+            <div class="icono">
+                <img src="img/icono1.svg" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque</p>
+            </div>
 
-        <div>
-            <img src="img/icono2.svg" alt="Icono Mejor Precio">
-            <h3>El Mejor Precio</h3>
-            <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque</p>
-        </div>
+            <div class="icono">
+                <img src="img/icono2.svg" alt="Icono Mejor Precio">
+                <h3>El Mejor Precio</h3>
+                <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque</p>
+            </div>
 
-        <div>
-            <img src="img/icono3.svg" alt="Icono a Tiempo">
-            <h3>A Tiempo</h3>
-            <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque</p>
-        </div>
+            <div class="icono">
+                <img src="img/icono3.svg" alt="Icono a Tiempo">
+                <h3>A Tiempo</h3>
+                <p>Quasi quibusdam, quos deserunt, recusandae iusto dolorem voluptatibus quaerat veritatis consectetur culpa sit dignissimos maiores iure id, magnam non voluptatum molestiae doloremque</p>
+            </div>
+        </div><!--Iconos nosotros-->
     </section>
 
     <!--------------------------------------------------------------------------------------------------------->
