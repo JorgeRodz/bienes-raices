@@ -1,6 +1,11 @@
-html{
+html {
     font-size: 62.5%; /*Reset para REMS - 62.5% = 10px de 16px | 1 rem = 10px  */
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
 }
+
 body {
     font-family: 'Lato', sans-serif; /*Establecimos el tipo de fuente para todo el documento*/
     font-size: 1.6rem; /*Para establecer un tamaño estandar a todo el font-size del documento;*/
@@ -9,12 +14,16 @@ body {
 
 
 /*---------------------------------------------------Globales----------------------------------------------------------------*/
-.contenedor { /*Usado en: Header | Section 'Mas sobre nosotros'*/
+img {
+    max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
+}
+.contenedor { /*Usado en: Header | Section 'Mas sobre nosotros' | main */
     max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
     margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
 }
+
 /*------------------Utilidades----------------------*/
-.seccion { /*Usado en: Section 'Mas sobre nosotors'*/
+.seccion { /*Usado en: Section 'Mas sobre nosotors' | main */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -23,6 +32,27 @@ body {
 }
 .centrar-texto {
     text-align: center;
+}
+.d-block {
+    display: block!important;
+}
+
+/*---------------Botones-----------------*/
+.boton {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+}
+.boton-amarillo {
+    background-color: #e08709;
+}
+.boton-verde {
+    background-color: #71b100;
 }
 
 
@@ -94,4 +124,33 @@ h4 {
 }
 .icono h3 {
     text-transform: uppercase; /*Para modifica el texto, en este caso poner los titulos en mayusculas*/
+}
+
+
+/*---------------------------------------------------Main--------------------------------------------------------------------*/
+
+/*---------------Anuncios-----------------*/
+.contenedor-anuncios {
+    display: flex;
+    justify-content: space-between;
+}
+.anuncio {
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid #b5b5b5;
+    background: #f5f5f5;
+}
+.contenido-anuncio {
+    padding: 2rem;
+}
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 0;
+}
+.precio {
+    color: #71b100;
+    font-weight: 700; /*El font-weight default de los <p> son 400 asi que los aumentamos para que se vean mas gruesos;*/
+}
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
 }
