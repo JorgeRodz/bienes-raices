@@ -150,6 +150,19 @@ h4 {
     color: #71b100;
     font-weight: 700; /*El font-weight default de los <p> son 400 asi que los aumentamos para que se vean mas gruesos;*/
 }
+.iconos-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.iconos-caracteristicas li {
+    /* flex-grow: 1; */
+    display: flex;
+}
+.iconos-caracteristicas li img {
+    margin-right: 1rem;
+}
 .ver-todas {
     display: flex;
     justify-content: flex-end;
