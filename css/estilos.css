@@ -154,3 +154,21 @@ h4 {
     display: flex;
     justify-content: flex-end;
 }
+
+
+/*--------------------------------------------------Contacto------------------------------------------------------------------*/
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto {
+    flex-grow: 1; /*Para que ocupe todo el espcio del contenedor...y automaticamente lo acomoda al principio del contenedor*/
+    color: #ffffff;
+}
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
