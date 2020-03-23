@@ -17,13 +17,13 @@ body {
 img {
     max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
 }
-.contenedor { /*Usado en: Header | Section 'Mas sobre nosotros' | Main | Contacto | Blog */
+.contenedor { /*Usado en: {Header} | Section 'Mas sobre nosotros' | Main | {Contacto} | Blog | {Footer} */
     max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
     margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
 }
 
 /*------------------Utilidades----------------------*/
-.seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog */
+.seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog | Footer */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -258,4 +258,20 @@ h4 {
 }
 .testimonial p {
     text-align: right;
+}
+
+
+/*---------------------------------------------------Footer------------------------------------------------------------------*/
+.site-footer {
+    background-color: #333333;
+    margin: 0; /*Para quitar el margin-bottom por defecto que trae la clase .seccion */
+}
+.contenedor-footer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright {  
+    margin: 0; /*Para quita el margen por defecto que traen los parrafos <p> */
+    color: #ffffff;
 }
