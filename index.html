@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <!------------------------------------------------Header--------------------------------------------------------->
+    <!------------------------------------------------Header----------------------------------------------------------------->
 
     <header class="site-header inicio">
         <div class="contenedor contenido-header"><!--Flexbox Container-->
@@ -31,7 +31,7 @@
         </div><!--contenedor contenido-header-->
     </header>
     
-    <!----------------------------------------------section------------------------------------------------------>
+    <!----------------------------------------section "Mas sobre nosotros"--------------------------------------------------->
 
     <section class="seccion contenedor">
         <h2 class="fw-300 centrar-texto">Más Sobre Nosotros</h2>
@@ -57,7 +57,7 @@
         </div><!--Iconos nosotros-->
     </section>
 
-    <!------------------------------------------------Main--------------------------------------------------------->
+    <!------------------------------------------------Main---------------------------------------------------------------->
 
     <main class="seccion contenedor">
         <h2 class="fw-300 centrar-texto">Casas y Depas en Venta</h2>
@@ -140,7 +140,7 @@
     </main>
     
 
-    <!---------------------------------------------------section------------------------------------------------------>
+    <!---------------------------------------------------section "Contacto"--------------------------------------------------->
 
     <section class="imagen-contacto"><!--Flexbox-->
         <div class="contenedor contenido-contacto">
@@ -150,35 +150,50 @@
         </div>
     </section>
 
-    <!-------------------------------------------------section-------------------------------------------------------->
+    <!-------------------------------------------------section "Blog"-------------------------------------------------------->
 
-    <section>
-        <h3>Nuestro Blog</h3>
+    <div class="seccion-inferior contenedor seccion"><!--flexbox-->
+        <section class="blog">
+            <h3 class="centrar-texto fw-300">Nuestro Blog</h3>
 
-        <article>
-            <img src="img/blog1.jpg" alt="Entrada de blog">
-            <h4>Terraza en el techo de tu casa</h4>
-            <p>Escrito el: <em>20/10/2019</em> por: <em>Admin</em> </p>
-            <p>Consejos para construir una terraza en el techo de tu casa, con los mejores materiales y ahorrando dinero</p>    
-        </article>
-        
-        <article>
-            <img src="img/blog2.jpg" alt="Entrada de blog">
-            <h4>Guía para la decoración de tu hogar</h4>
-            <p>Escrito el: <em>20/10/2019</em> por: <em>Admin</em> </p>
-            <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>    
-        </article>          
-    </section>
+            <article class="entrada-blog"><!--flexbox-->
+                <div class="imagen">
+                    <img src="img/blog1.jpg" alt="Entrada de blog">
+                </div><!--imagen-->
+                <div class="texto-entrada">
+                    <a href="#">
+                        <h4>Terraza en el techo de tu casa</h4>
+                    </a>
+                    <p>Escrito el: <span>20/10/2019</span> por: <span>Admin</span> </p>
+                    <p>Consejos para construir una terraza en el techo de tu casa, con los mejores materiales y ahorrando dinero</p>  
+                </div><!--texto-entrada-->  
+            </article><!--entrada-blog-->
+            <article class="entrada-blog"><!--flexbox-->
+                <div class="imagen">
+                    <img src="img/blog2.jpg" alt="Entrada de blog">
+                </div><!--imagen-->
+                <div class="texto-entrada">
+                    <a href="#">
+                        <h4>Guía para la decoración de tu hogar</h4>
+                    </a>
+                    <p>Escrito el: <span>20/10/2019</span> por: <span>Admin</span> </p>
+                    <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>    
+                </div><!--texto-entrada-->
+            </article><!--entrada-blog-->         
+        </section><!--blog-->
+
+        <section class="testimoniales">
+            <h3 class="centrar-texto fw-300">Testimoniales</h3>
+            <div class="testimonial">
+                <blockquote>
+                    El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron cumple con todas mis expectativas.
+                </blockquote>
+                <p>-Jorge Rodriguez</p>    
+            </div><!--testimonial-->
+        </section><!--testimoniales-->
+    </div><!--seccion-inferior contenedor-->
     
-    <section>
-        <h3>Testimoniales</h3>
-        <blockquote>
-            El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron cumple con todas mis expectativas.
-        </blockquote>
-        <p>-Jorge Rodriguez</p>    
-    </section>
-    
-    <!------------------------------------------------------footer--------------------------------------------------->
+    <!------------------------------------------------------footer--------------------------------------------------------->
     
     <footer>
         <nav class="navegacion"> 

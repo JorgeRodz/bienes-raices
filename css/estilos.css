@@ -17,13 +17,13 @@ body {
 img {
     max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
 }
-.contenedor { /*Usado en: Header | Section 'Mas sobre nosotros' | main */
+.contenedor { /*Usado en: Header | Section 'Mas sobre nosotros' | Main | Contacto | Blog */
     max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
     margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
 }
 
 /*------------------Utilidades----------------------*/
-.seccion { /*Usado en: Section 'Mas sobre nosotors' | main */
+.seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -184,4 +184,78 @@ h4 {
 }
 .contenido-contacto p {
     font-size: 1.8rem;
+}
+
+/*---------------------------------------------Seccion inferior (Blog - Testimoniales)----------------------------------------*/
+
+/*---------------Nuestro blog-----------------*/
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+}
+.seccion-inferior .blog {
+    flex-basis: 60%;
+}
+.seccion-inferior .testimoniales {
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+.entrada-blog .imagen {
+    flex-basis: 40%;
+}
+.entrada-blog .texto-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+.texto-entrada a {
+    color: #000000;
+    text-decoration: none;
+}
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.2;
+}
+.texto-entrada h4::after { /* Para mostrar la barrita verde que sale abajo de los titulos h4 que son las entradas de blog*/
+    content:''; 
+    display: block; /*Para poder aplicar withd y ehight*/
+    width: 15rem; /*Para que se muestre la barrita*/
+    height: .5rem; /*le agregamos algo de altura a la barrita*/
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+.texto-entrada span { /*Para mostrar la fecha y el autor en color amarillo*/
+    color: #e08709;
+}
+
+/*---------------Testimoniales-----------------*/
+.testimonial {
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 2rem;
+}
+.testimonial blockquote::before { /*Para poner la imagen de la comilla*/
+    content: '';
+    background-image: url(../img/comilla.svg);
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    position: absolute; /*Para posicionar el elemento dentro del contenerdor padre, el contenedor padre debe de tener "position relative"*/
+    left: -2rem;
+}
+.testimonial blockquote {
+    position: relative; /*Para que los hijos puedan usar "position absolute" */
+    padding-left: 5rem;
+    font-weight: 300;
+}
+.testimonial p {
+    text-align: right;
 }
