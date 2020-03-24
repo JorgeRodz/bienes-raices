@@ -73,7 +73,11 @@ h4 {
 
 
 /*---------------------------------------------------Header------------------------------------------------------------------*/
-.site-header.inicio {
+.site-header {
+    background-color: #333333;
+    padding: 0 0 3rem 0;
+}
+.site-header.inicio { /*Cundo tenga estas dos clases una etiqueta se aplicar esta regla CSS*/
     background-image: url(../img/header.jpg);
     background-position: center center; /*Centramos la imagen*/
     background-size: cover; /*Le agregamos un tamaño a la imagen, en este caso usamos 'cover' que lo que hace es redistribur la imagen para que no se vean espacios */
@@ -274,4 +278,20 @@ h4 {
 .copyright {  
     margin: 0; /*Para quita el margen por defecto que traen los parrafos <p> */
     color: #ffffff;
+}
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PAGINAS INTERNAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*2 columnas de 1fr cada una*/
+    grid-column-gap: 2rem;
+}
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
 }
