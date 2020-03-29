@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!--Indica que estamos usando html5-->
+<html lang="es-MX"> <!--Definimos como lenguaje el español referente de Mexico.-->
+<head>
+    <meta charset="UTF-8"> <!--Para que se puedan leer caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para que se visualiza el texto correctamente en dispositivos moviles-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--Para agregar compatibilidad con internet explorer-->
+    <title>Bienes raices</title> <!--Titulo del documento-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css"> <!--Siempre dejar nuestra hoja de estilos al final para que estos sean los utimos que se aplican-->
+</head>
+<body>
+
+    <!------------------------------------------------Header----------------------------------------------------------------->
+
+    <header class="site-header">
+        <div class="contenedor contenido-header"><!--Flexbox Container-->
+            <div class="barra"><!--Flexbox Container-->
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes raices">
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>    
+            </div><!--barra-->
+        </div><!--contenedor contenido-header-->
+    </header><!--site-header-->
+
+    <!--------------------------------------------------------------------------------------------------------------------->
+
+    <h1 class="fw-300 centrar-texto">Casa en Venta frente al bosque</h1>
+    <img src="img/destacada.jpg" alt="Imagen Anuncio">
+
+    <main class="contenedor seccion contenido-centrado">
+        <div class="resumen-propiedad"><!--Flexbox-->
+            <p class="precio">$3,000,000</p>
+            <ul class="iconos-caracteristicas"><!--Flexbox-->
+                <li><!--flexbox-->
+                    <img src="img/icono_wc.svg" alt="icono wc">
+                    <p>3</p>
+                </li>
+                <li><!--flexbox-->
+                    <img src="img/icono_estacionamiento.svg" alt="icono auto">
+                    <p>3</p>
+                </li>
+                <li><!--flexbox-->
+                    <img src="img/icono_dormitorio.svg" alt="icono habitaciones">
+                    <p>4</p>
+                </li>
+            </ul>
+        </div><!--resumen-propiedad-->
+        <p>
+            laoreet, magna scelerisque molestie imperdiet, urna lorem hendrerit lorem, molestie ultricies orci dolor quis neque. Maecenas suscipit diam sagittis enim vehicula congue. Vivamus consequat enim commodo, condimentum augue id, varius diam. Mauris vitae diam at magna lacinia hendrerit vitae vitae nisi. Phasellus vel sodales nisi. Sed euismod nunc luctus, sagittis justo id, malesuada nunc. Donec cursus consectetur tempus. Proin eu est dui. Maecenas euismod blandit metus, dapibus condimentum augue sollicitudin a. Duis luctus arcu a lectus lacinia ullamcorper. Proin consequat turpis eu turpis interdum interdum.</p>
+        <p>
+            tincidunt egestas nunc, vel luctus ante mattis id. Donec rhoncus nisl mi, sit amet pretium nibh sollicitudin id. Sed cursus ullamcorper turpis, egestas gravida nisl eleifend vitae. Sed blandit nisl in nisi semper, nec rutrum turpis elementum. Integer rutrum diam quis nisl varius rhoncus. Aliquam sodales elit est.</p>
+    </main>
+
+    <!------------------------------------------------------footer--------------------------------------------------------->
+    
+    <footer class="site-footer">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion"> 
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los Derechos Reservados 2019 &copy;</p>
+        </div><!--contenedor contenedor-footer-->
+    </footer><!--site-footer seccion-->
+    
+</body>
+</html>

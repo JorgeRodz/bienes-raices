@@ -21,24 +21,52 @@ img {
     max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
     margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
 }
+
+/*---------------Header global-----------------*/
 .site-header {
     background-color: #333333;
     padding: 0 0 3rem 0;
 }
+.contenido-header {
+    height: 100%; /*Tomamos el 100% de altura del contenedor padre osea ocupamos todo el height del <header> esto para aplicar los valores de la propiedad justify-content que se desbloquea gracias al display: flex; */
+    display: flex;
+    flex-direction: column; /*Para cambiar la direccion de flexbox*/
+    justify-content: space-between;
+}
+.barra {
+    display: flex;
+    justify-content: space-between; /*Para alinear los flex items horizontalmente*/
+    align-items: center; /*Para alinear los flex items verticalmente*/
+    padding-top: 3rem;
+}
+/* Navegacion */
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;/*Para quitar la linea que traen por defecto los enlaces*/
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+.navegacion a:last-of-type { /*Para seleccionar el ultimo enlace del menu de navegacion*/
+    margin-right: 0;
+}
+.navegacion a:hover {
+    color: #71b100;
+}
 
-/*------------------Utilidades----------------------*/
-.seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog | Footer */
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+/*---------------Footer global-----------------*/
+.site-footer {
+    background-color: #333333;
+    margin: 0; /*Para quitar el margin-bottom por defecto que trae la clase .seccion */
+    margin-top: 4rem;
 }
-.fw-300 {
-    font-weight: 300;
+.contenedor-footer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
 }
-.centrar-texto {
-    text-align: center;
-}
-.d-block {
-    display: block!important;
+.copyright {  
+    margin: 0; /*Para quita el margen por defecto que traen los parrafos <p> */
+    color: #ffffff;
 }
 
 /*---------------Botones-----------------*/
@@ -59,6 +87,27 @@ img {
     background-color: #71b100;
 }
 
+/*------------------Utilidades----------------------*/
+.seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog | Footer */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.centrar-texto {
+    text-align: center;
+}
+.d-block {
+    display: block!important;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.contenido-centrado {
+    max-width: 800px;
+}
+
 
 /*---------Medidas estandar para titulos-----------*/
 h1 {
@@ -76,7 +125,7 @@ h4 {
 }
 
 
-/*---------------------------------------------------Header------------------------------------------------------------------*/
+/*---------------------------------------------------Header Index------------------------------------------------------------------*/
 .site-header.inicio { /*Cundo tenga estas dos clases una etiqueta se aplicar esta regla CSS*/
     background-image: url(../img/header.jpg);
     background-position: center center; /*Centramos la imagen*/
@@ -84,36 +133,11 @@ h4 {
     height: 100vh; /*Viewport height*/
     min-height: 60rem; /*El contenido ya no se hara mas pequeño y quedara en 600px*/
 }
-.contenido-header {
-    height: 100%; /*Tomamos el 100% de altura del contenedor padre osea ocupamos todo el height del <header> esto para aplicar los valores de la propiedad justify-content que se desbloquea gracias al display: flex; */
-    display: flex;
-    flex-direction: column; /*Para cambiar la direccion de flexbox*/
-    justify-content: space-between;
-}
 .contenido-header h1 {
     color: #ffffff;
     padding-bottom: 2rem;
     max-width: 60rem; /* Para establecer un witdh maximo y que el contenido hiciera un salto de linea.*/
     line-height: 2; /* Interlineado de textos*/
-}
-.barra {
-    display: flex;
-    justify-content: space-between; /*Para alinear los flex items horizontalmente*/
-    align-items: center; /*Para alinear los flex items verticalmente*/
-    padding-top: 3rem;
-}
-/*---------------Navegacion-----------------*/
-.navegacion a {
-    color: #ffffff;
-    text-decoration: none;/*Para quitar la linea que traen por defecto los enlaces*/
-    font-size: 1.8rem;
-    margin-right: 2rem;
-}
-.navegacion a:last-of-type { /*Para seleccionar el ultimo enlace del menu de navegacion*/
-    margin-right: 0;
-}
-.navegacion a:hover {
-    color: #71b100;
 }
 
 
@@ -165,9 +189,10 @@ h4 {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
+    flex-grow: 1; /*para que el contenido se expanda en todo el contenedor*/
+    max-width: 500px;
 }
 .iconos-caracteristicas li {
-    /* flex-grow: 1; */
     display: flex;
 }
 .iconos-caracteristicas li img {
@@ -271,28 +296,13 @@ h4 {
 }
 
 
-/*---------------------------------------------------Footer------------------------------------------------------------------*/
-.site-footer {
-    background-color: #333333;
-    margin: 0; /*Para quitar el margin-bottom por defecto que trae la clase .seccion */
-}
-.contenedor-footer {
-    padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
-}
-.copyright {  
-    margin: 0; /*Para quita el margen por defecto que traen los parrafos <p> */
-    color: #ffffff;
-}
-
 
 
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PAGINAS INTERNAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! nosotros.html !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!! nosotros.html !!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .contenido-nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /*2 columnas de 1fr cada una*/
@@ -303,4 +313,11 @@ h4 {
     font-size: 2rem;
     margin: 0;
     padding: 1rem 0 3rem 0;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!! anuncio.html !!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
