@@ -127,7 +127,7 @@ h4 {
 
 /*---------------------------------------------------Header Index------------------------------------------------------------------*/
 .site-header.inicio { /*Cundo tenga estas dos clases una etiqueta se aplicar esta regla CSS*/
-    background-image: url(../img/header.jpg);
+    background-image: url(https://i.imgur.com/Ykfo7mX.jpg);
     background-position: center center; /*Centramos la imagen*/
     background-size: cover; /*Le agregamos un tamaño a la imagen, en este caso usamos 'cover' que lo que hace es redistribur la imagen para que no se vean espacios */
     height: 100vh; /*Viewport height*/
@@ -206,7 +206,7 @@ h4 {
 
 /*--------------------------------------------------Contacto------------------------------------------------------------------*/
 .imagen-contacto {
-    background-image: url(../img/encuentra.jpg);
+    background-image: url(https://i.imgur.com/xP4kx9a.jpg);
     height: 400px;
     background-position: center center;
     background-size: cover;
