@@ -17,10 +17,6 @@ body {
 img {
     max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
 }
-.contenedor { /*Usado en: {Header} | Section 'Mas sobre nosotros' | Main | {Contacto} | Blog | {Footer} */
-    max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
-    margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
-}
 
 /*---------------Header global-----------------*/
 .site-header {
@@ -88,6 +84,10 @@ img {
 }
 
 /*------------------Utilidades----------------------*/
+.contenedor { /*Usado en: {Header} | Section 'Mas sobre nosotros' | Main | {Contacto} | Blog | {Footer} */
+    max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
+    margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
+}
 .seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog | Footer */
     margin-top: 2rem;
     margin-bottom: 2rem;
