@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!--Indica que estamos usando html5-->
+<html lang="es-MX"> <!--Definimos como lenguaje el español referente de Mexico.-->
+<head>
+    <meta charset="UTF-8"> <!--Para que se puedan leer caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para que se visualiza el texto correctamente en dispositivos moviles-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--Para agregar compatibilidad con internet explorer-->
+    <title>Bienes raices</title> <!--Titulo del documento-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css"> <!--Siempre dejar nuestra hoja de estilos al final para que estos sean los utimos que se aplican-->
+</head>
+<body>
+
+    <!------------------------------------------------Header----------------------------------------------------------------->
+
+    <header class="site-header">
+        <div class="contenedor contenido-header"><!--Flexbox Container-->
+            <div class="barra"><!--Flexbox Container-->
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes raices">
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>    
+            </div><!--barra-->
+        </div><!--contenedor contenido-header-->
+    </header><!--site-header-->
+
+    <!--------------------------------------------------------------------------------------------------------------------->
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen principal">
+
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class="fw-300 centrar-texto">Llena el formulario de Contacto</h2>
+        <form action="">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+        </form>
+    </main>
+
+    <!------------------------------------------------------footer--------------------------------------------------------->
+    
+    <footer class="site-footer">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion"> 
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los Derechos Reservados 2019 &copy;</p>
+        </div><!--contenedor contenedor-footer-->
+    </footer><!--site-footer seccion-->
+    
+</body>
+</html>
