@@ -75,6 +75,10 @@ img {
     margin-top: 3rem;
     display: inline-block;
     text-align: center;
+    border: none; /*Para quitar el borde por defecto que traen algunos elementos en donde usamos esta clase*/
+}
+.boton:hover {
+    cursor: pointer; /*Para que se muestre una "manita" cuando se posiciona el curso encima del elemento*/
 }
 .boton-amarillo {
     background-color: #e08709;
@@ -125,7 +129,7 @@ h4 {
 }
 
 
-/*---------------------------------------------------Header Index------------------------------------------------------------------*/
+/*---------------------------------------------------Header Index------------------------------------------------------------*/
 .site-header.inicio { /*Cundo tenga estas dos clases una etiqueta se aplicar esta regla CSS*/
     background-image: url(https://i.imgur.com/Ykfo7mX.jpg);
     background-position: center center; /*Centramos la imagen*/
@@ -317,6 +321,50 @@ h4 {
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!! anuncio.html !!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!! contacto.html !!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.contacto p {
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+legend {
+    font-size: 2rem;
+    color: #4f4f4f;
+}
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+input:not([type="submit"]),  /* Para decirle que aplique la regla css a todos los input menos a los tipo submit*/
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+input[type="radio"] {
+    width: auto; /*Usamos el valor de "auto" para que el witdh se ajuste al contenido de la etiqueta, en este caso el input de tipo radio*/
+    margin: 0;
+}
+select { /*Para quitar la aparencia que traen por default los <select> */
+    -webkit-appearance: none; /*-webkit- es un prefijo para decir que se aplique en un navegador chrome, tambien existe para mozilla, safari, etc*/
+    appearance: none; /* Esta propieda nunca va a ir sola, siempre ira acompañada de un prefijo de navegador*/
+}
+textarea {
+    height: 20rem;
+}
+.forma-contacto {
+    max-width: 30rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
