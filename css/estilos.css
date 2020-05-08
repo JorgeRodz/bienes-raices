@@ -18,6 +18,32 @@ img {
     max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
 }
 
+/*------------------Utilidades----------------------*/
+.contenedor { /*Usado en: {Header} | Section 'Mas sobre nosotros' | Main | {Contacto} | Blog | {Footer} */
+    max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
+    margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
+    width: 95%;
+}
+.seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog | Footer */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.centrar-texto {
+    text-align: center;
+}
+.d-block {
+    display: block!important;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.contenido-centrado {
+    max-width: 800px;
+}
+
 /*---------------Header global-----------------*/
 .site-header {
     background-color: #333333;
@@ -27,23 +53,49 @@ img {
     height: 100%; /*Tomamos el 100% de altura del contenedor padre osea ocupamos todo el height del <header> esto para aplicar los valores de la propiedad justify-content que se desbloquea gracias al display: flex; */
     display: flex;
     flex-direction: column; /*Para cambiar la direccion de flexbox*/
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenido-header h1 {
+    text-align: center;
+}
+@media (min-width:769px) {
+    .contenido-header {
+        justify-content: space-between;
+        align-items: unset;
+    }
+    .contenido-header h1 {
+        text-align: left;
+    }
 }
 .barra {
-    display: flex;
-    justify-content: space-between; /*Para alinear los flex items horizontalmente*/
-    align-items: center; /*Para alinear los flex items verticalmente*/
+    text-align: center;
     padding-top: 3rem;
+}
+@media (min-width:769px) {
+    .barra {
+        display: flex;
+        justify-content: space-between; /*Para alinear los flex items horizontalmente*/
+        align-items: center; /*Para alinear los flex items verticalmente*/
+    }
 }
 /* Navegacion */
 .navegacion a {
     color: #ffffff;
     text-decoration: none;/*Para quitar la linea que traen por defecto los enlaces*/
-    font-size: 1.8rem;
-    margin-right: 2rem;
+    font-size: 2.2rem;
+    margin: 0;
+    display: block;
 }
-.navegacion a:last-of-type { /*Para seleccionar el ultimo enlace del menu de navegacion*/
+@media (min-width:769px) {
+    .navegacion a {
+        display: inline;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    .navegacion a:last-of-type { /*Para seleccionar el ultimo enlace del menu de navegacion*/
     margin-right: 0;
+    }
 }
 .navegacion a:hover {
     color: #71b100;
@@ -76,6 +128,16 @@ img {
     display: inline-block;
     text-align: center;
     border: none; /*Para quitar el borde por defecto que traen algunos elementos en donde usamos esta clase*/
+    /*para que tomen el 100% del width del contenedor*/
+    display: block;
+    flex-basis: 100%;
+}
+@media (min-width:769px) {
+    /*para que el boton no ocupe todo el witdh*/
+    .boton {
+        display: inline-block;
+        flex-basis: auto;
+    }
 }
 .boton:hover {
     cursor: pointer; /*Para que se muestre una "manita" cuando se posiciona el curso encima del elemento*/
@@ -85,31 +147,6 @@ img {
 }
 .boton-verde {
     background-color: #71b100;
-}
-
-/*------------------Utilidades----------------------*/
-.contenedor { /*Usado en: {Header} | Section 'Mas sobre nosotros' | Main | {Contacto} | Blog | {Footer} */
-    max-width: 120rem; /*Solo va a llegar hasta los 120rem*/
-    margin: 0 auto; /*Centrar el elemento(display de block) en el contenedor */
-}
-.seccion { /*Usado en: Section 'Mas sobre nosotors' | Main | Blog | Footer */
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.fw-300 {
-    font-weight: 300;
-}
-.centrar-texto {
-    text-align: center;
-}
-.d-block {
-    display: block!important;
-}
-.mt-0 {
-    margin-top: 0;
-}
-.contenido-centrado {
-    max-width: 800px;
 }
 
 
@@ -144,15 +181,20 @@ h4 {
     line-height: 2; /* Interlineado de textos*/
 }
 
-
 /*----------------------------------------Section 'Mas sobre nosotros'-------------------------------------------------------*/
-.iconos-nosotros{
-    display: flex;
-    justify-content: space-between;
+@media (min-width:769px) {
+    .iconos-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }   
 }
 .icono {
-    flex-basis: calc(33.3% - 1rem); /*Hace los calculos para que cada elemento tenga un withd del resultado de la operacion de (33.3% - 1)*/
     text-align: center; /*Para alinear el contenido al centros*/
+}
+@media (min-width:769px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem); /*Hace los calculos para que cada elemento tenga un withd del resultado de la operacion de (33.3% - 1)*/
+    }
 }
 .icono h3 {
     text-transform: uppercase; /*Para modifica el texto, en este caso poner los titulos en mayusculas*/
