@@ -502,3 +502,14 @@ textarea {
     justify-content: space-between;
     align-items: center;
 }
+.centrar-boton {
+    text-align: center;
+}
+@media (min-width:769px) {
+    .centrar-boton {
+        text-align: left;
+    }
+}
+input[type="submit"] {
+    display: inline;
+}
