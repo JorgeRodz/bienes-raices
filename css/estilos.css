@@ -44,35 +44,31 @@ img {
     max-width: 800px;
 }
 
+/*---------Medidas estandar para titulos-----------*/
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+    
+}
+h4 {
+    font-size: 2.6rem;
+}
+
 /*---------------Header global-----------------*/
 .site-header {
     background-color: #333333;
     padding: 0 0 3rem 0;
 }
-.contenido-header {
-    height: 100%; /*Tomamos el 100% de altura del contenedor padre osea ocupamos todo el height del <header> esto para aplicar los valores de la propiedad justify-content que se desbloquea gracias al display: flex; */
-    display: flex;
-    flex-direction: column; /*Para cambiar la direccion de flexbox*/
-    justify-content: space-around;
-    align-items: center;
-}
-.contenido-header h1 {
-    text-align: center;
-}
-@media (min-width:769px) {
-    .contenido-header {
-        justify-content: space-between;
-        align-items: unset;
-    }
-    .contenido-header h1 {
-        text-align: left;
-    }
-}
 .barra {
     text-align: center;
     padding-top: 3rem;
 }
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
     .barra {
         display: flex;
         justify-content: space-between; /*Para alinear los flex items horizontalmente*/
@@ -87,7 +83,7 @@ img {
     margin: 0;
     display: block;
 }
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
     .navegacion a {
         display: inline;
         margin-right: 2rem;
@@ -107,10 +103,24 @@ img {
     margin: 0; /*Para quitar el margin-bottom por defecto que trae la clase .seccion */
     margin-top: 4rem;
 }
+.site-footer nav {
+    display: none;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .site-footer nav {
+        display: block;
+    }
+}
 .contenedor-footer {
-    padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+    padding: 2rem 0 2rem;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .contenedor-footer {
+        padding: 3rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .copyright {  
     margin: 0; /*Para quita el margen por defecto que traen los parrafos <p> */
@@ -132,7 +142,7 @@ img {
     display: block;
     flex-basis: 100%;
 }
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
     /*para que el boton no ocupe todo el witdh*/
     .boton {
         display: inline-block;
@@ -150,22 +160,6 @@ img {
 }
 
 
-/*---------Medidas estandar para titulos-----------*/
-h1 {
-    font-size: 3.8rem;
-}
-h2 {
-    font-size: 3.4rem;
-}
-h3 {
-    font-size: 3rem;
-    
-}
-h4 {
-    font-size: 2.6rem;
-}
-
-
 /*---------------------------------------------------Header Index------------------------------------------------------------*/
 .site-header.inicio { /*Cundo tenga estas dos clases una etiqueta se aplicar esta regla CSS*/
     background-image: url(../img/header.jpg);
@@ -174,15 +168,33 @@ h4 {
     height: 100vh; /*Viewport height*/
     min-height: 60rem; /*El contenido ya no se hara mas pequeño y quedara en 600px*/
 }
+.contenido-header {
+    height: 100%; /*Tomamos el 100% de altura del contenedor padre osea ocupamos todo el height del <header> esto para aplicar los valores de la propiedad justify-content que se desbloquea gracias al display: flex; */
+    display: flex;
+    flex-direction: column; /*Para cambiar la direccion de flexbox*/
+    justify-content: space-around;
+    align-items: center;
+}
 .contenido-header h1 {
     color: #ffffff;
     padding-bottom: 2rem;
     max-width: 60rem; /* Para establecer un witdh maximo y que el contenido hiciera un salto de linea.*/
     line-height: 2; /* Interlineado de textos*/
+    text-align: center;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .contenido-header {
+        justify-content: space-between;
+        align-items: unset;
+    }
+    .contenido-header h1 {
+        text-align: left;
+    }
 }
 
+
 /*----------------------------------------Section 'Mas sobre nosotros'-------------------------------------------------------*/
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
     .iconos-nosotros{
         display: flex;
         justify-content: space-between;
@@ -191,7 +203,7 @@ h4 {
 .icono {
     text-align: center; /*Para alinear el contenido al centros*/
 }
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
     .icono {
         flex-basis: calc(33.3% - 1rem); /*Hace los calculos para que cada elemento tenga un withd del resultado de la operacion de (33.3% - 1)*/
     }
@@ -204,20 +216,26 @@ h4 {
 /*---------------------------------------------------Main--------------------------------------------------------------------*/
 
 /*---------------Anuncios-----------------*/
-.contenedor-anuncios {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /*Para agrupar el contenido, y automaticamente nos crea el salto de linea de debido al flex-basis que tenemos*/
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .contenedor-anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /*Para agrupar el contenido, y automaticamente nos crea el salto de linea de debido al flex-basis que tenemos*/
+    }    
 }
 .anuncio {
-    /*flex: flex-grow | flex-shrink | flex-basis */
-    flex: 0 0 calc(33.3% - 1rem);
-    /* flex-grow: 0; */
-    /* flex-shrink: 0; Ponemos el valor de 0 para que nuestro contenido no se encoga y asi aplicar las medidas del flex-basis */
-    /* flex-basis: calc(33.3% - 1rem); */
     border: 1px solid #b5b5b5;
     background: #f5f5f5;
     margin-bottom: 2rem;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .anuncio {
+        /*flex: flex-grow | flex-shrink | flex-basis */
+        flex: 0 0 calc(33.3% - 1rem);
+        /* flex-grow: 0; */
+        /* flex-shrink: 0; Ponemos el valor de 0 para que nuestro contenido no se encoga y asi aplicar las medidas del flex-basis */
+        /* flex-basis: calc(33.3% - 1rem); */
+    }
 }
 .contenido-anuncio {
     padding: 2rem;
@@ -246,7 +264,17 @@ h4 {
 }
 .ver-todas {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .ver-todas {
+        justify-content: flex-end;
+    }
+}
+.ver-todas a {
+    display: inline-block;
+    flex-basis: auto;
+    margin: 0 0 2rem;
 }
 
 
@@ -260,20 +288,34 @@ h4 {
     align-items: center;
 }
 .contenido-contacto {
-    flex-grow: 1; /*Para que ocupe todo el espcio del contenedor...y automaticamente lo acomoda al principio del contenedor*/
+    flex-basis: 95%; /*Para que ocupe todo el espcio del contenedor...y automaticamente lo acomoda al principio del contenedor*/
     color: #ffffff;
+    text-align: center;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .contenido-contacto {
+        text-align: left;
+    }
 }
 .contenido-contacto p {
     font-size: 1.8rem;
+}
+.contenido-contacto a {
+    display: inline-block;
+    flex-basis: auto;
+    margin-bottom: 4rem;
 }
 
 /*---------------------------------------------Seccion inferior (Blog - Testimoniales)----------------------------------------*/
 
 /*---------------Nuestro blog-----------------*/
-.seccion-inferior {
-    display: flex;
-    justify-content: space-between;
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }    
 }
+
 .seccion-inferior .blog {
     flex-basis: 60%;
 }
@@ -285,15 +327,25 @@ h4 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
+    line-height: 1.5;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .entrada-blog {
+        line-height: 2;
+    }
 }
 .entrada-blog:last-of-type {
     margin-bottom: 0;
 }
 .entrada-blog .imagen {
     flex-basis: 40%;
+    display: flex;
+}
+.entrada-blog .imagen img {
+    object-fit: cover;
 }
 .entrada-blog .texto-entrada {
-    flex-basis: calc(60% - 3rem);
+    flex-basis: calc(60% - 2rem);
 }
 .texto-entrada a {
     color: #000000;
@@ -316,12 +368,25 @@ h4 {
 }
 
 /*---------------Testimoniales-----------------*/
+.testimoniales {
+    line-height: 1.5;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .testimoniales {
+        line-height: 2;
+    }
+}
 .testimonial {
     background-color: #71b100;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     padding: 2rem;
     color: #ffffff;
     border-radius: 2rem;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .testimonial {
+        font-size: 2.4rem;
+    }
 }
 .testimonial blockquote::before { /*Para poner la imagen de la comilla*/
     content: '';
@@ -331,6 +396,12 @@ h4 {
     height: 4rem;
     position: absolute; /*Para posicionar el elemento dentro del contenerdor padre, el contenedor padre debe de tener "position relative"*/
     left: -2rem;
+    top: -2rem;
+}
+@media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .testimonial blockquote::before { /*Para poner la imagen de la comilla*/
+        top: 0;
+    }
 }
 .testimonial blockquote {
     position: relative; /*Para que los hijos puedan usar "position absolute" */
