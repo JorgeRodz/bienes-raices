@@ -420,10 +420,30 @@ h4 {
 
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!! nosotros.html !!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.nosotros-title {
+    font-size: 3.3rem;
+}
+@media (min-width:481px) {
+    .nosotros-title {
+        font-size: 3.8rem;
+    }
+}
 .contenido-nosotros {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /*2 columnas de 1fr cada una*/
-    grid-column-gap: 2rem;
+    border-bottom: 3px solid #e1e1e1;
+}
+@media (min-width:769px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /*2 columnas de 1fr cada una*/
+        grid-column-gap: 2rem;
+        border: none;
+    }    
+}
+.contenido-nosotros .imagen {
+    display: flex;
+}
+.contenido-nosotros .imagen img {
+    object-fit: cover;
 }
 .texto-nosotros blockquote {
     font-weight: 900;
