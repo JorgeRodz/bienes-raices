@@ -75,7 +75,24 @@ h4 {
         align-items: center; /*Para alinear los flex items verticalmente*/
     }
 }
+
+/*Mobile Menu*/
+.mobile-menu img {
+    width: 5rem;
+}
+@media (min-width:769px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
 /* Navegacion */
+.navegacion {
+    display: none;
+}
+.navegacion:target {
+    display: block;
+}
 .navegacion a {
     color: #ffffff;
     text-decoration: none;/*Para quitar la linea que traen por defecto los enlaces*/
@@ -84,6 +101,9 @@ h4 {
     display: block;
 }
 @media (min-width:769px) { /*---------------min-width:769px-----------------*/
+    .navegacion { /*para que se vea la navegacion porque por default esta escondida*/
+        display: block;
+    }
     .navegacion a {
         display: inline;
         margin-right: 2rem;
